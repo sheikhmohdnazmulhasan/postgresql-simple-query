@@ -20,3 +20,10 @@ CREATE TABLE courses (
     course_name VARCHAR(255) NOT NULL,
     credits INT NOT NULL
 );
+
+-- crate enrollment table with ref
+CREATE TABLE enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INT REFERENCES students (student_id),
+    course_id INT REFERENCES courses (course_id)
+);
