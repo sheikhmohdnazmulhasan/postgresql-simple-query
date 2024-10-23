@@ -117,3 +117,27 @@ VALUES (1, 1, 1),
     (2, 1, 2),
     (3, 2, 1),
     (4, 3, 2);
+
+-- Query 1: Insert a new student record with the following details
+INSERT INTO
+    students (
+        student_name,
+        age,
+        email,
+        frontend_mark,
+        backend_mark,
+        status
+    )
+VALUES (
+        'Sheikh Mohammad Nazmul H.',
+        21,
+        'nazmulofficial@outlook.com',
+        32,
+        54,
+        NULL
+    );
+
+SELECT *
+FROM students
+    -- SELECT MAX(student_id) FROM students;
+    -- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
