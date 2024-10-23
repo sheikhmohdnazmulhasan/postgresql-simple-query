@@ -185,7 +185,10 @@ GROUP BY
 -- Query 7: Calculate and display the average age of all students.
 SELECT ROUND(AVG(age), 2) AS average_age FROM students;
 
--- SELECT * FROM students;
+-- Query 8: Retrieve the names of students whose email addresses contain 'example.com'.
+SELECT student_name FROM students WHERE email ILIKE '%example.com%';
+
+SELECT * FROM students;
 -- SELECT * FROM enrollment;
 -- SELECT * FROM courses;
 -- SELECT MAX(student_id) FROM students;
