@@ -187,9 +187,3 @@ SELECT ROUND(AVG(age), 2) AS average_age FROM students;
 
 -- Query 8: Retrieve the names of students whose email addresses contain 'example.com'.
 SELECT student_name FROM students WHERE email ILIKE '%example.com%';
-
-SELECT * FROM students;
--- SELECT * FROM enrollment;
--- SELECT * FROM courses;
--- SELECT MAX(student_id) FROM students;
--- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
