@@ -175,6 +175,13 @@ OFFSET
     2
 LIMIT 2;
 
+-- Query 6: Retrieve the course names and the number of students enrolled in each course.
+SELECT c.course_name, COUNT(e.student_id) AS student_enrolled
+FROM courses c
+    LEFT JOIN enrollment e USING (course_id)
+GROUP BY
+    c.course_name;
+
 -- SELECT * FROM students;
 -- SELECT * FROM enrollment;
 -- SELECT * FROM courses;
