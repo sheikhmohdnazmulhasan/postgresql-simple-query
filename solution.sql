@@ -138,7 +138,6 @@ VALUES (
     );
 
 -- Query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js'.
-
 SELECT s.student_name
 FROM
     students s
@@ -147,6 +146,20 @@ FROM
 WHERE
     c.course_name = 'Next.js';
 
-SELECT * FROM students;
+-- Query 3: Update the status of the student with the highest total (frontend_mark + backend_mark) to 'Awarded'.
+UPDATE students
+SET
+    status = 'Awarded'
+WHERE
+    student_id = (
+        SELECT student_id
+        FROM students
+        ORDER BY (frontend_mark + backend_mark) DESC
+        LIMIT 1
+    );
+
+-- SELECT * FROM students;
+-- SELECT * FROM enrollment;
+-- SELECT * FROM courses;
 -- SELECT MAX(student_id) FROM students;
 -- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
