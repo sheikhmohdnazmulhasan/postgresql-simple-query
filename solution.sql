@@ -94,8 +94,7 @@ VALUES (
         NULL
     );
 
--- sss
-
+-- Insert data into the courses table
 INSERT INTO
     courses (
         course_id,
@@ -106,3 +105,15 @@ VALUES (1, 'Next.js', 3),
     (2, 'React.js', 4),
     (3, 'Databases', 3),
     (4, 'Prisma', 3);
+
+-- Insert data into the enrollment table:
+INSERT INTO
+    enrollment (
+        enrollment_id,
+        student_id,
+        course_id
+    )
+VALUES (1, 1, 1),
+    (2, 1, 2),
+    (3, 2, 1),
+    (4, 3, 2);
