@@ -1,4 +1,4 @@
-# PostgreSQL Guide
+# PostgreSQL Quick Reference
 
 ## What is PostgreSQL?
 
