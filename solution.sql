@@ -158,8 +158,17 @@ WHERE
         LIMIT 1
     );
 
+-- Query 4: Delete all courses that have no students enrolled.
+DELETE FROM courses
+WHERE
+    course_id NOT IN (
+        SELECT DISTINCT
+            course_id
+        FROM enrollment
+    );
+
 -- SELECT * FROM students;
 -- SELECT * FROM enrollment;
--- SELECT * FROM courses;
+SELECT * FROM courses;
 -- SELECT MAX(student_id) FROM students;
 -- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
