@@ -137,7 +137,16 @@ VALUES (
         NULL
     );
 
-SELECT *
-FROM students
-    -- SELECT MAX(student_id) FROM students;
-    -- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
+-- Query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js'.
+
+SELECT s.student_name
+FROM
+    students s
+    JOIN enrollment e USING (student_id)
+    JOIN courses c USING (course_id)
+WHERE
+    c.course_name = 'Next.js';
+
+SELECT * FROM students;
+-- SELECT MAX(student_id) FROM students;
+-- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
