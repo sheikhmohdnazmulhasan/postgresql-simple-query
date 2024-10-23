@@ -182,6 +182,9 @@ FROM courses c
 GROUP BY
     c.course_name;
 
+-- Query 7: Calculate and display the average age of all students.
+SELECT ROUND(AVG(age), 2) AS average_age FROM students;
+
 -- SELECT * FROM students;
 -- SELECT * FROM enrollment;
 -- SELECT * FROM courses;
