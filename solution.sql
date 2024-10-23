@@ -28,7 +28,7 @@ CREATE TABLE enrollment (
     course_id INT REFERENCES courses (course_id)
 );
 
--- insert data into students
+-- insert data into students table
 INSERT INTO
     students (
         student_id,
@@ -95,3 +95,14 @@ VALUES (
     );
 
 -- sss
+
+INSERT INTO
+    courses (
+        course_id,
+        course_name,
+        credits
+    )
+VALUES (1, 'Next.js', 3),
+    (2, 'React.js', 4),
+    (3, 'Databases', 3),
+    (4, 'Prisma', 3);
