@@ -167,8 +167,16 @@ WHERE
         FROM enrollment
     );
 
+-- Query 5: Retrieve the names of students using a limit of 2, starting from the 3rd student.
+SELECT student_name
+FROM students
+ORDER BY student_id
+OFFSET
+    2
+LIMIT 2;
+
 -- SELECT * FROM students;
 -- SELECT * FROM enrollment;
-SELECT * FROM courses;
+-- SELECT * FROM courses;
 -- SELECT MAX(student_id) FROM students;
 -- ALTER SEQUENCE students_student_id_seq RESTART WITH 7;
